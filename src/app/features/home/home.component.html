@@ -1,0 +1,15 @@
+<div class="news">
+  <h2>News</h2>
+  <div *ngIf="battleRoyaleNews && battleRoyaleNews.motds" class="news-items">
+    <div *ngFor="let news of battleRoyaleNews.motds" class="news-item">
+      <img [src]="news.image" alt="{{ news.title }}" />
+      <div class="news-content">
+        <h3>{{ news.title }}</h3>
+        <p>{{ news.body }}</p>
+      </div>
+    </div>
+    <div *ngIf="!battleRoyaleNews.motds || battleRoyaleNews.motds.length === 0">
+      There are no news.
+    </div>
+  </div>
+</div>

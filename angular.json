@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "creare-challange": {
+    "creare-challenge": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/creare-challange",
+            "outputPath": "dist/creare-challenge",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "creare-challange:build:production"
+              "browserTarget": "creare-challenge:build:production"
             },
             "development": {
-              "browserTarget": "creare-challange:build:development"
+              "browserTarget": "creare-challenge:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "creare-challange:build"
+            "browserTarget": "creare-challenge:build"
           }
         },
         "test": {

@@ -1,0 +1,9 @@
+@import '../../../../styles/main.scss';
+
+.footer {
+  @include background-color;
+  padding: 10px;
+  text-align: center;
+  font-size: 0.7rem;
+  height: 100%;
+}

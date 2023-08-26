@@ -1,27 +1,55 @@
-# CreareChallange
+# Creare Challenge
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.
+## Table of Contents
 
-## Development server
+- [Prerequisites](#prerequisites)
+- [Getting Started](#getting-started)
+- - [Clone the Repository](#clone-the-repository)
+- - [Install Dependencies](#install-dependencies)
+- [Running the App](#running-the-app)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Prerequisites
 
-## Code scaffolding
+Before you begin, ensure you have the following tools installed:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- [Node.js](https://nodejs.org/)
+- [Angular CLI](https://cli.angular.io/)
 
-## Build
+## Getting Started
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Clone the Repository
 
-## Running unit tests
+1. Open your terminal or command prompt.
+2. Navigate to the directory where you want to clone the repository.
+3. Run the following command to clone the repository:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+   ```bash
+   git clone https://github.com/andremellojr/creare-challenge.git
+   ```
 
-## Running end-to-end tests
+## Install Dependencies
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+To set up and run this Angular app locally, follow these steps:
 
-## Further help
+1. Navigate to the project directory:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+    ```bash
+    cd creare-challenge
+    ```
+
+
+2. Install project dependencies:
+
+    ```bash
+    npm install
+    ```
+
+## Running the App
+
+To start the development server and view the app in your browser, run the following command:
+
+```bash
+ng serve
+```
+
+Then open your web browser and go to [http://localhost:4200/](http://localhost:4200/) to see the app in action.

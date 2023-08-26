@@ -1,0 +1,28 @@
+<div class="shop">
+  <h2>Daily Shop</h2>
+  <div *ngIf="shopData && shopData.entries" class="shop-entries">
+    <div *ngFor="let entry of shopData.entries" class="shop-entry">
+      <div class="shop-entry-header">
+        <h3>{{ entry.devName }}</h3>
+        <p class="price">Price: {{ entry.regularPrice }} V-Bucks</p>
+      </div>
+      <div class="shop-entry-items">
+        <div *ngFor="let item of entry.items" class="shop-item">
+          <div class="shop-item-content">
+            <img [src]="item.images.smallIcon" alt="{{ item.name }}" class="small-image" />
+            <img [src]="item.images.icon" alt="{{ item.name }}" class="large-image" />
+            <div class="shop-item-content-text">
+              <p class="name">{{ item.name }}</p>
+              <p class="description">{{ item.description }}</p>
+              <p>Type: {{ item.type.displayValue }}</p>
+              <p>Added: {{ item.added | date:'shortDate' }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="!shopData.entries || shopData.entries.length === 0">
+      No entries available.
+    </div>
+  </div>
+</div>

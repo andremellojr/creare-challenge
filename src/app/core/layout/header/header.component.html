@@ -1,0 +1,16 @@
+<header class="header">
+  <div class="user-info">
+    <img src="assets/images/user-avatar.png" alt="User Image" class="user-info-image">
+    <p class="user-info-text">Hi, <span>Andre</span></p>
+  </div>
+  <div class="user-config">
+    <button class="dark-mode" (click)="toggleDarkMode()">
+      <img src="/assets/icons/dark-mode.svg" alt="Shop Icon" class="icon">
+    </button>
+    <select class="language-selector" (change)="onLanguageChange($event)">
+      <ng-container *ngFor="let language of supportedLanguages">
+        <option [value]="language.code" [selected]="language.code === 'en'">{{ language.name }}</option>
+      </ng-container>
+    </select>
+  </div>
+</header>

@@ -1,0 +1,71 @@
+@import '../../../styles/main.scss';
+
+.news {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 30px;
+  align-items: center;
+  min-height: 100%;
+  @include secondary-background-color;
+
+  &-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+  }
+
+  &-item {
+    width: 300px;
+    height: 200px;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+
+    img {
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s, filter 0.3s;
+      filter: saturate(70%);
+    }
+
+    &:hover {
+      img {
+        transform: scale(1.1);
+        filter: saturate(100%);
+      }
+    }
+  }
+
+  &-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1;
+    color: white;
+
+    h3 {
+      font-size: 1rem;
+      margin-bottom: 5px;
+    }
+
+    p {
+      font-size: 0.7rem;
+      line-height: 0.9rem;
+    }
+  }
+}
+
+@media (min-width: $breakpoint-tablet) {
+  .news {
+    align-items: flex-start;
+
+    &-items {
+      justify-content: flex-start;
+    }
+  }
+}

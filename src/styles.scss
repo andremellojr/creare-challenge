@@ -1,1 +1,39 @@
-/* You can add global styles to this file, and also import other style files */
+@import './styles/variables';
+
+// Reset
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  line-height: 1.5;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+// Light and Dark Mode
+
+:root {
+  --text-color: #{$lightest-color};
+  --background-color: #{$darkest-color};
+  --secondary-background-color: #{$dark-color};
+  --icon-color: #{$lightest-color-filter};
+}
+
+[data-theme='light'] {
+  --text-color: #{$darkest-color};
+  --background-color: #{$lightest-color};
+  --secondary-background-color: #{$light-color};
+  --icon-color: #{$darkest-color-filter};
+}

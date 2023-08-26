@@ -1,0 +1,15 @@
+@mixin text-color {
+  color: var(--text-color);
+}
+
+@mixin background-color {
+  background-color: var(--background-color);
+}
+
+@mixin secondary-background-color {
+  background-color: var(--secondary-background-color);
+}
+
+@mixin icon-color {
+  filter: var(--icon-color);
+}

@@ -1,0 +1,22 @@
+// Colors
+$darkest-color: #1D2A34;
+$dark-color: #253341;
+$medium-color: #CEDEDA;
+$light-color: #F3F7F6;
+$lightest-color: #fffdf9;
+$accent-color: #42b9eb;
+
+// Filters
+$lightest-color-filter: invert(100%) sepia(23%) saturate(5825%) hue-rotate(291deg) brightness(123%) contrast(114%);
+$darkest-color-filter: invert(12%) sepia(4%) saturate(5250%) hue-rotate(165deg) brightness(91%) contrast(89%);
+$accent-color-filter: invert(68%) sepia(12%) saturate(2672%) hue-rotate(163deg) brightness(96%) contrast(91%);
+
+// Breakpoints
+$breakpoint-tablet: 1024px;
+
+// Layout
+$menu-width: 250px;
+$menu-height: 50px;
+$header-height: 60px;
+$footer-height: 40px;
+$progress-height: 5px;
