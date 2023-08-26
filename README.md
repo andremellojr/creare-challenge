@@ -12,7 +12,7 @@
 
 Before you begin, ensure you have the following tools installed:
 
-- [Node.js](https://nodejs.org/)
+- [Node.js (LTS)](https://nodejs.org/)
 - [Angular CLI](https://cli.angular.io/)
 
 ## Getting Started

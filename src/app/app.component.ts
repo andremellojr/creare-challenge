@@ -30,7 +30,7 @@ export class AppComponent implements OnInit {
       this.isDarkMode = darkMode;
 
       if (darkMode) {
-        document.documentElement.setAttribute('data-theme', 'dark');
+        document.documentElement.removeAttribute('data-theme');
       } else {
         document.documentElement.setAttribute('data-theme', 'light');
       }
