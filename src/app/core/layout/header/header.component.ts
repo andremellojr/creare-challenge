@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { DarkModeService } from '../../services/dark-mode.service';
 import { LanguageService } from '../../services/language.service';
 import { LoadingService } from '../../services/loading.service';
@@ -9,6 +9,7 @@ import { LoadingService } from '../../services/loading.service';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
+  @Input() selectedLanguage = 'en';
   supportedLanguages = [
     { code: 'ar', name: 'العربية' },
     { code: 'de', name: 'Deutsch' },
@@ -40,6 +41,7 @@ export class HeaderComponent {
   onLanguageChange(event: Event): void {
     const selectedLanguage = (event.target as HTMLSelectElement).value;
     this.loadingService.setLoading(true);
+    localStorage.setItem('selectedLanguage', selectedLanguage);
     this.languageService.setLanguage(selectedLanguage);
   }
 }

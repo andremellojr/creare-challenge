@@ -2,6 +2,7 @@ import { ChangeDetectorRef, Component, OnInit, OnDestroy } from '@angular/core';
 import { LoadingService } from './core/services/loading.service';
 import { DarkModeService } from './core/services/dark-mode.service';
 import { Subscription } from 'rxjs';
+import { LanguageService } from './core/services/language.service';
 
 @Component({
   selector: 'app-root',
@@ -13,11 +14,13 @@ export class AppComponent implements OnInit {
   isDarkMode: boolean = false;
   loadingSubscription: Subscription | undefined;
   darkModeSubscription: Subscription | undefined;
+  selectedLanguage = 'en';
 
   constructor(
-    public loadingService: LoadingService,
+    private loadingService: LoadingService,
+    private languageService: LanguageService,
     private darkModeService: DarkModeService,
-    public detector: ChangeDetectorRef
+    private detector: ChangeDetectorRef
   ) { }
 
   ngOnInit(): void {
@@ -35,6 +38,9 @@ export class AppComponent implements OnInit {
         document.documentElement.setAttribute('data-theme', 'light');
       }
     });
+
+    this.selectedLanguage = localStorage.getItem('selectedLanguage') || this.selectedLanguage;
+    this.languageService.setLanguage(this.selectedLanguage);
   }
 
   ngOnDestroy(): void {
